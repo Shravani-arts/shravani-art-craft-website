@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Art & Sketches | Shravani Arts & Crafts</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fffaf7;
+            color: #3d2921;
+        }
+
+        header {
+            text-align: center;
+            padding: 35px 20px 20px;
+        }
+
+        header h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #8a625b;
+            line-height: 1.6;
+        }
+
+        .back {
+            display: inline-block;
+            margin: 20px;
+            text-decoration: none;
+            color: #a85f58;
+            font-weight: bold;
+        }
+
+        .art-section {
+            max-width: 1000px;
+            margin: 20px auto 60px;
+            padding: 0 20px;
+        }
+
+        .art-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .art-card {
+            background: white;
+            border-radius: 16px;
+            padding: 18px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        .art-image {
+            width: 100%;
+            height: 320px;
+            background: #ffffff;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #8a625b;
+            margin-bottom: 15px;
+            overflow: hidden;
+            padding: 10px;  
+        }
+
+        .art-card h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .art-card p {
+            color: #6d5953;
+            line-height: 1.5;
+        }
+
+        .status {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 7px 14px;
+            border-radius: 20px;
+            background: #e4efe2;
+            color: #4d6b4a;
+            font-size: 14px;
+        }
+
+        @media (max-width: 750px) {
+            .art-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            header h1 {
+                font-size: 32px;
+            }
+
+            .art-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        .navbar {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-bottom: 1px solid #eadbd6;
+}
+
+.logo {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #5a4038;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.menu a:hover {
+    color: #b96f68;
+}
+
+@media (max-width: 800px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px 15px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+}
+.footer {
+    margin-top: 70px;
+    padding: 40px 20px;
+    text-align: center;
+    background: #3d2921;
+    color: white;
+}
+
+.footer-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 25px 0;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 13px;
+    opacity: 0.8;
+}
+.art-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 8px;
+}
+.image-modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.image-modal img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.close-image {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    font-weight: bold;
+}
+.enquire-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    border-radius: 25px;
+    background: #a85f58;
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.enquire-btn :hover {
+    opacity: 0.85;
+}
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Shravani Arts & Crafts
+        </div>
+    
+        <div class="menu">
+    
+            <a href="index.html">Home</a>
+    
+            <a href="art.html">Art & Sketches</a>
+    
+            <a href="handmade.html">Handmade</a>
+    
+            <a href="custom-sketch.html">Custom Sketch</a>
+
+            <a href="about.html">About</a>
+
+            <a href="contact.html">Contact</a>
+    
+        </div>
+    
+    </nav>
+
+    <a href="index.html" class="back">← Back to Home</a>
+    <a href="handmade.html" class="back"> 👜 View Handmade Collection</a>
+    <a href="custom-sketch.html" class="back">
+        ✏️ Custom Pencil Sketch
+    </a>
+
+    <header>
+        <h1>Art & Sketches</h1>
+
+        <p>
+            Explore my original sketches, portraits and handmade artwork.
+        </p>
+    </header>
+
+    <section class="art-section">
+
+        <div class="art-grid">
+
+            <div class="art-card">
+                <div class="art-image">
+                    <img src="images/pencil-sketch-1.jpg"
+                alt="Original Pencil Sketch"
+                onclick="openImage(this.src)">
+                </div>
+
+                <h2>Pencil Sketch</h2>
+
+                <p>
+                    Original hand-drawn pencil artwork.
+                </p>
+
+                <span class="status">
+                    Portfolio
+                </span>
+                <a href="contact.html"
+                class="enquire-btn">
+                    Enquire About This Artwork
+                </a>
+            </div>
+
+
+            <div class="art-card">
+                <div class="art-image">
+                <img src="images/pencil-sketch-2.jpg"
+                     alt="Portrait Sketch"
+                     onclick="openImage(this.src)">
+                </div>
+
+                <h2>Portrait Sketch</h2>
+
+                <p>
+                    Detailed portrait created by hand.
+                </p>
+
+                <span class="status">
+                    Custom Available
+                </span>
+                                <a href="contact.html"
+                class="enquire-btn">
+                    Enquire About This Artwork
+                </a>
+
+        </div>
+
+
+            <div class="art-card">
+                <div class="art-image">
+                    <img src="images/pencil-sketch-3.jpg"
+                    alt="Custom Pencil Sketch"
+                    onclick="openImage(this.src)">
+                </div>
+
+                <h2>Custom Pencil Sketch</h2>
+
+                <p>
+                    Personalised pencil sketches made from your photo.
+                </p>
+
+                <span class="status">
+                    Enquire Now
+                </span>
+                <a href="custom-sketch.html"
+                class="enquire-btn">
+                    Request Custom Sketch
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+    <footer class="footer">
+
+    <div class="footer-title">
+        Shravani Arts & Crafts
+    </div>
+
+    <p>
+        Original art, custom pencil sketches and handmade creations.
+    </p>
+
+    <div class="footer-links">
+
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="shipping.html">Shipping & Delivery</a>
+        <a href="refund.html">Return & Refund</a>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 Shravani Arts & Crafts. All rights reserved.
+    </p>
+
+</footer>
+<div id="imageModal" class="image-modal"
+ onclick="closeImage()">
+    <span class="close-image">&times;</span>
+    <img id="fullImage" src="" alt="Full Artwork">
+</div>
+
+<script>
+function openImage(imageSrc) {
+
+    document.getElementById("imageModal").style.display = "flex";
+    document.getElementById("fullImage").src = imageSrc;
+}
+
+function closeImage() {
+    document.getElementById("imageModal").style.display = "none";
+}
+</script>
+
+</body>
+</html>

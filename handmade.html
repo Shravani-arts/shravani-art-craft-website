@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Handmade Collection | Shravani Arts & Crafts</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fffaf7;
+            color: #3d2921;
+        }
+
+        header {
+            text-align: center;
+            padding: 35px 20px 20px;
+        }
+
+        header h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 42px;
+            margin-bottom: 12px;
+        }
+
+        header p {
+            font-size: 18px;
+            color: #8a625b;
+            line-height: 1.6;
+        }
+
+        .back {
+            display: inline-block;
+            margin: 20px;
+            text-decoration: none;
+            color: #a85f58;
+            font-weight: bold;
+        }
+
+        .products {
+            max-width: 1100px;
+            margin: 20px auto 60px;
+            padding: 0 20px;
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 16px;
+            padding: 18px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 240px;
+            background: #f1e4df;
+            border-radius: 12px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: #8a625b;
+            margin-bottom: 15px;
+        }
+
+        .product-card h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 22px;
+            margin-bottom: 8px;
+        }
+
+        .product-card p {
+            color: #6d5953;
+            line-height: 1.5;
+        }
+
+        .price {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 12px;
+        }
+
+        .available {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 7px 14px;
+            border-radius: 20px;
+            background: #e4efe2;
+            color: #4d6b4a;
+            font-size: 14px;
+        }
+
+        .enquire {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 11px 20px;
+            border-radius: 10px;
+            background: #c97d75;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .enquire:hover {
+            opacity: 0.9;
+        }
+
+        @media (max-width: 750px) {
+
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+        }
+
+        @media (max-width: 500px) {
+
+            header h1 {
+                font-size: 32px;
+            }
+
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+
+        }
+        .navbar {
+    width: 100%;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-bottom: 1px solid #eadbd6;
+}
+
+.logo {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #5a4038;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.menu a:hover {
+    color: #b96f68;
+}
+
+@media (max-width: 800px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 18px 15px;
+    }
+
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+}
+.footer {
+    margin-top: 70px;
+    padding: 40px 20px;
+    text-align: center;
+    background: #3d2921;
+    color: white;
+}
+
+.footer-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 13px;
+    opacity: 0.8;
+}
+.product-image img {
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+    </style>
+</head>
+
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Shravani Arts & Crafts
+        </div>
+    
+        <div class="menu">
+    
+            <a href="index.html">Home</a>
+    
+            <a href="art.html">Art & Sketches</a>
+    
+            <a href="handmade.html">Handmade</a>
+    
+            <a href="custom-sketch.html">Custom Sketch</a>
+
+            <a href="about.html">About</a>
+
+            <a href="contact.html">Contact</a>
+    
+        </div>
+    
+    </nav>
+
+    <a href="index.html" class="back">
+        ← Back to Home
+    </a>
+    <a href="art.html" class="back">
+        🎨 View Art & Sketches
+    </a>
+    <a href="custom-sketch.html" class="back">
+        ✏️ Custom Pencil Sketch
+    </a>
+
+    <header>
+
+        <h1>Handmade Collection</h1>
+
+        <p>
+            Discover handmade bangles, potli bags and beautiful accessories.
+        </p>
+
+    </header>
+
+
+    <section class="products">
+
+        <div class="product-grid">
+
+
+            <!-- Handmade Bangles -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/bangles.jpg"
+                         alt="Handmade Bangles"
+            onclick="openProductImage(this.src)">
+                </div>
+
+                <h2>Handmade Bangles</h2>
+
+                <p>
+                    Beautiful handmade bangles created with care.
+                </p>
+
+                <div class="price">
+                    ₹ 99/pair 
+
+                </div>
+
+                <span class="available">
+                    Available
+                </span>
+
+                <br>
+
+        <a href="https://wa.me/91+9398544846?text=Hello%20Shravani%20Arts%20%26%20Crafts"
+   class="enquire"
+   target="_blank">
+    Order / Enquire on WhatsApp
+</a>
+        <a href="mailto:YOUR-shravaniartsandcrafts66@gmail.com?subject=Handmade%20Bangles%20Enquiry"
+   class="enquire">
+    Enquire by Email
+</a>
+            </div>
+
+
+            <!-- Potli Bag -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/potli-bag.jpg"
+                         alt="Small Handmade Potli Bag"
+
+                onclick="openProductImage(this.src)">
+                </div>
+
+                <h2>Small Potli Bag</h2>
+
+                <p>
+                    Cute handmade potli bags for different occasions.
+                </p>
+
+                <div class="price">
+                    ₹ 299
+                </div>
+
+                <span class="available">
+                    Available
+                </span>
+
+                <br>
+
+   <a href="https://wa.me/91+9398544846?text=Hello%20Shravani%20Arts%20%26%20Crafts,%20I%20am%20interested%20in%20the%20Small%20Potli%20Bag."
+   class="enquire"
+   target="_blank">
+    Order / Enquire on WhatsApp
+</a>
+        <a href="mailto:YOUR-shravaniartsandcrafts66@gmail.com?subject=Handmade%20Bangles%20Enquiry"
+   class="enquire">
+    Enquire by Email
+</a>        
+            </div>
+
+
+            <!-- Hair Bands -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/hair-band.jpg"
+                         alt="Handmade Hair Bands"
+
+                onclick="openProductImage(this.src)">
+                </div>
+
+                <h2>Hair Bands</h2>
+
+                <p>
+                    Handmade hair accessories designed with care.
+                </p>
+
+                <div class="price">
+                    ₹ 79
+                </div>
+
+                <span class="available">
+                    Available
+                </span>
+
+                <br>
+
+                <a href="https://wa.me/91+9398544846?text=Hello%20Shravani%20Arts%20%26%20Crafts,%20I%20am%20interested%20in%20Handmade%20Hair%20Bands."
+   class="enquire"
+   target="_blank">
+    Order / Enquire on WhatsApp
+</a>
+          <a href="mailto:YOUR-shravaniartsandcrafts66@gmail.com?subject=Handmade%20Bangles%20Enquiry"
+   class="enquire">
+    Enquire by Email
+</a>
+                
+
+            </div>
+
+
+            <!-- Crunchies -->
+
+            <div class="product-card">
+
+                <div class="product-image">
+                    <img src="images/crunchies.jpg"
+                         alt="Handmade Crunchies"
+                onclick="openProductImage(this.src)">
+                </div>
+
+                <h2>Crunchies</h2>
+
+                <p>
+                    Handmade fabric crunchies in different designs.
+                </p>
+
+                <div class="price">
+                    ₹ 69
+                </div>
+
+                <span class="available">
+                    Available
+                </span>
+
+                <br>
+
+                <a href="https://wa.me/91+9398544846?text=Hello%20Shravani%20Arts%20%26%20Crafts,%20I%20am%20interested%20in%20Handmade%20Crunchies."
+   class="enquire"
+   target="_blank">
+    Order / Enquire on WhatsApp
+                </a>
+            <a href="mailto:YOUR-shravaniartsandcrafts66@gmail.com?subject=Handmade%20Bangles%20Enquiry"
+   class="enquire">
+    Enquire by Email
+</a>
+            </div>
+
+
+        </div>
+
+    </section>
+    <footer class="footer">
+
+    <div class="footer-title">
+        Shravani Arts & Crafts
+    </div>
+
+    <p>
+        Original art, custom pencil sketches and handmade creations.
+    </p>
+
+    <div class="footer-links">
+
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="shipping.html">Shipping & Delivery</a>
+        <a href="refund.html">Return & Refund</a>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 Shravani Arts & Crafts. All rights reserved.
+    </p>
+
+</footer>
+
+</body>
+
+</html>

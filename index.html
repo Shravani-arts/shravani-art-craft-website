@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+content="width=device-width,initial-scale=1.0">
+
+    <title>Shravani Arts & Crafts</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Georgia, "Times New Roman", serif;
+            background: #fffaf7;
+            color: #3d2921;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .heart {
+            font-size: 34px;
+            color: #c77b72;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 58px;
+            font-weight: 600;
+            margin-bottom: 18px;
+        }
+
+        .tagline {
+            font-size: 25px;
+            color: #b96f68;
+            margin-bottom: 25px;
+        }
+
+        .intro {
+            font-family: Arial, sans-serif;
+            font-size: 19px;
+            line-height: 1.7;
+            max-width: 650px;
+            margin: 0 auto 35px;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 17px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn-art {
+            background: #c97d75;
+            color: white;
+        }
+
+        .btn-handmade {
+            background: #879b84;
+            color: white;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+            opacity: 0.9;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 38px;
+            }
+
+            .tagline {
+                font-size: 21px;
+            }
+
+            .intro {
+                font-size: 17px;
+            }
+
+            .btn {
+                width: 100%;
+                max-width: 280px;
+            }
+        }
+        .navbar {
+        width: 100%;
+        padding: 20px 40px;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        background: white;
+        border-bottom: 1px solid #eadbd6;
+    }
+    
+    .logo {
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 22px;
+        font-weight: bold;
+    }
+    
+    .menu {
+        display: flex;
+        gap: 25px;
+        align-items: center;
+    }
+    
+    .menu a {
+        text-decoration: none;
+        color: #5a4038;
+        font-family: Arial, sans-serif;
+        font-size: 15px;
+    }
+    
+    .menu a:hover {
+        color: #b96f68;
+    }
+    
+    @media (max-width: 800px) {
+    
+        .navbar {
+            flex-direction: column;
+            gap: 15px;
+            padding: 18px 15px;
+        }
+    
+        .menu {
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+    
+    }
+    .footer {
+    margin-top: 70px;
+    padding: 40px 20px;
+    text-align: center;
+    background: #3d2921;
+    color: white;
+}
+
+.footer-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 13px;
+    opacity: 0.8;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Shravani Arts & Crafts
+        </div>
+    
+        <div class="menu">
+    
+            <a href="index.html">Home</a>
+    
+            <a href="art.html">Art & Sketches</a>
+    
+            <a href="handmade.html">Handmade</a>
+    
+            <a href="custom-sketch.html">Custom Sketch</a>
+
+            <a href="about.html">About</a>
+
+            <a href="contact.html">Contact</a>
+    
+        </div>
+    
+    </nav>
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <div class="heart"> ♡ </div>
+
+            <h1>Shravani Arts & Crafts</h1>
+
+            <p class="tagline">
+                Handmade with Creativity & Care
+            </p>
+
+            <p class="intro">
+                Original art, customised pencil sketches and
+                handmade creations — made with care.
+            </p>
+
+            <div class="buttons">
+
+                <a href="art.html" class="btn btn-art">
+                    🎨 Explore Art
+                </a>
+
+                <a href="handmade.html" class="btn btn-handmade">
+                    👜 Shop Handmade
+                </a>
+
+            </div>
+            <div class="custom-link">
+
+                <a href="custom-sketch.html">
+                    ✏️ Custom Pencil Sketch
+                </a>
+                <footer class="footer">
+
+    <div class="footer-title">
+        Shravani Arts & Crafts
+    </div>
+
+    <p>
+        Original art, custom pencil sketches and handmade creations.
+    </p>
+
+    <div class="footer-links">
+
+        <a href="about.html">About</a>
+
+        <a href="contact.html">Contact</a>
+
+        <a href="privacy.html">Privacy Policy</a>
+
+        <a href="terms.html">Terms & Conditions</a>
+
+        <a href="shipping.html">Shipping & Delivery</a>
+
+        <a href="refund.html">Return & Refund</a>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 Shravani Arts & Crafts. All rights reserved.
+    </p>
+
+</footer>
+            
+            </div>
+        </div>
+
+    </section>
+
+</body>
+</html>
+

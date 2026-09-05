@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contact | Shravani Arts & Crafts</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #fffaf7;
+            color: #3d2921;
+        }
+
+        .navbar {
+            width: 100%;
+            padding: 20px 40px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            background: white;
+            border-bottom: 1px solid #eadbd6;
+        }
+
+        .logo {
+                    font-family: Georgia, "Times New Roman", serif;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .menu {
+            display: flex;
+            gap: 25px;
+            align-items: center;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #5a4038;
+            font-size: 15px;
+        }
+
+        .menu a:hover {
+            color: #b96f68;
+        }
+
+        .contact {
+            max-width: 850px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .contact-box {
+            background: white;
+            padding: 45px;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            text-align: center;
+        }
+
+        h1 {
+            font-family: Georgia, "Times New Roman", serif;
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .intro {
+            color: #8a625b;
+            font-size: 18px;
+            line-height: 1.7;
+            margin-bottom: 35px;
+        }
+
+        .contact-method {
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 14px;
+            background: #fffaf7;
+        }
+
+        .contact-method h2 {
+            font-family: Georgia, "Times New Roman", serif;
+            margin-bottom: 10px;
+        }
+
+        .contact-method p {
+            color: #6d5953;
+            margin-bottom: 15px;
+        }
+
+        .contact-button {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 10px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+        }
+
+        .whatsapp {
+            background: #6f9b70;
+        }
+
+        .email {
+            background: #c97d75;
+        }
+
+        .note {
+            margin-top: 30px;
+            font-size: 15px;
+            line-height: 1.7;
+            color: #6d5953;
+        }
+
+        @media (max-width: 800px) {
+
+            .navbar {
+                flex-direction: column;
+                gap: 15px;
+                padding: 18px 15px;
+            }
+
+            .menu {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .contact-box {
+                padding: 28px 20px;
+            }
+
+            h1 {
+                font-size: 34px;
+            }
+
+        }
+        .footer {
+    margin-top: 70px;
+    padding: 40px 20px;
+    text-align: center;
+    background: #3d2921;
+    color: white;
+}
+
+.footer-title {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin: 25px 0;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.copyright {
+    font-size: 13px;
+    opacity: 0.8;
+}
+.contact-method form {
+    max-width: 600px;
+    margin: 20px auto 0;
+}
+
+.contact-method input,
+.contact-method select,
+.contact-method textarea {
+    width: 100%;
+    padding: 13px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #eadbd6;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    background: white;
+    color: #3d2921;
+}
+
+.contact-method textarea {
+    resize: vertical;
+}
+
+.submit-button {
+    border: none;
+    padding: 13px 25px;
+    border-radius: 10px;
+    background: #a85f58;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    opacity: 0.9;
+}
+    </style>
+    <style>
+.contact-form {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.contact-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-form label {
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+}
+ 
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  margin-top: 15px;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: #2f8f83;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  opacity: 0.9;
+}
+
+@media (max-width: 600px) {
+  .contact-form {
+    margin: 25px 15px;
+    padding: 20px;
+  }
+}
+</style>
+
+</head>
+
+
+<body>
+
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Shravani Arts & Crafts
+        </div>
+
+        <div class="menu">
+
+            <a href="index.html">Home</a>
+
+            <a href="art.html">Art & Sketches</a>
+
+            <a href="handmade.html">Handmade</a>
+
+            <a href="custom-sketch.html">Custom Sketch</a>
+
+            <a href="about.html">About</a>
+
+            <a href="contact.html">Contact</a>
+
+        </div>
+
+    </nav>
+
+
+    <section class="contact">
+
+        <div class="contact-box">
+
+            <h1>Contact Us</h1>
+
+            <p class="intro">
+                Have a question, custom request or want to place an order?
+                         Contact us through WhatsApp or Email.
+            </p>
+
+
+            <div class="contact-method">
+
+                <h2>💬 WhatsApp</h2>
+
+                <p>
+                    For product enquiries, custom sketch requests
+                    and order details.
+                </p>
+
+                <a href="#" class="contact-button whatsapp">
+                    Contact on WhatsApp
+                </a>
+
+            </div>
+<div class="contact-form">
+  <h2>📩 Send an Enquiry</h2>
+
+  <form action="https://formspree.io/f/xdeodwlv" method="POST">
+
+    <label>Name</label>
+    <input type="text" name="name" placeholder="Your Name" required>
+
+    <label>Email</label>
+    <input type="email" name="email" placeholder="Your Email" required>
+
+    <label>Phone Number</label>
+    <input type="text" name="phone" placeholder="Your Phone Number" required>
+
+    <label>What are you interested in?</label>
+    <select name="service" required>
+      <option value="">Select an option</option>
+      <option value="Art & Sketches">Art & Sketches</option>
+      <option value="Handmade Products">Handmade Products</option>
+      <option value="Custom Sketch">Custom Sketch</option>
+      <option value="Other">Other</option>
+    </select>
+
+    <label>Message</label>
+    <textarea name="message" rows="5" placeholder="Tell us what you need..." required></textarea>
+
+    <button type="submit">Send Enquiry</button>
+
+  </form>
+</div>
+
+            <div class="contact-method">
+
+                <h2>✉️ Email</h2>
+
+                <p>
+                    Send us your product enquiry or custom artwork
+                    requirements by email.
+                </p>
+
+                <a href="#" class="contact-button email">
+                    Contact by Email
+                </a>
+
+            </div>
+<div class="contact-method">
+
+    <h2>📩 Send an Enquiry</h2>
+
+    <p>
+        Please fill in the details below. We will contact you
+        with product availability, delivery charges and order details.
+    </p>
+
+    <form>
+
+        <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            required
+        >
+
+        <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            required
+        >
+
+        <input
+            type="tel"
+            name="whatsapp"
+            placeholder="WhatsApp Number"
+            required
+        >
+
+        <select name="product" required>
+
+            <option value="">Select Product</option>
+            <option value="Handmade Bangles">
+                Handmade Bangles
+            </option>
+
+            <option value="Small Potli Bag">
+                Small Potli Bag
+            </option>
+
+            <option value="Hair Bands">
+                Hair Bands
+            </option>
+
+            <option value="Crunchies">
+                Crunchies
+            </option>
+
+            <option value="Custom Pencil Sketch">
+                Custom Pencil Sketch
+            </option>
+
+            <option value="Other">
+                Other
+            </option>
+
+        </select>
+
+        <textarea
+            name="message"
+            rows="5"
+            placeholder="Tell us what you are looking for..."
+            required
+        ></textarea>
+
+        <button type="submit" class="submit-button">
+            Send Enquiry
+        </button>
+
+    </form>
+
+</div>
+
+            <p class="note">
+                Before making any payment, customers will receive
+                the confirmed product details, applicable delivery
+                charges and final order summary.
+            </p>
+
+        </div>
+
+    </section>
+<footer class="footer">
+
+    <div class="footer-title">
+        Shravani Arts & Crafts
+    </div>
+
+    <p>
+        Original art, custom pencil sketches and handmade creations.
+    </p>
+
+    <div class="footer-links">
+
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="shipping.html">Shipping & Delivery</a>
+        <a href="refund.html">Return & Refund</a>
+
+    </div>
+
+    <p class="copyright">
+        © 2026 Shravani Arts & Crafts. All rights reserved.
+    </p>
+
+</footer>
+
+</body>
+
+</html>
