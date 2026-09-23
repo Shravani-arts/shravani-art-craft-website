@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Feedback | Shravani Arts & Crafts</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #fffaf7;
+        color: #3d2921;
+    }
+
+    header {
+        background: white;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 1px solid #eadbd6;
+    }
+
+    header h1 {
+        margin: 0;
+        font-family: Georgia, serif;
+    }
+
+    nav {
+        margin-top: 15px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #a85f58;
+        margin: 0 12px;
+        font-weight: 500;
+    }
+
+    .feedback-container {
+        max-width: 600px;
+        margin: 40px auto;
+        padding: 25px;
+        background: white;
+        border-radius: 12px;
+        box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+    }
+
+    .feedback-container h2 {
+        text-align: center;
+        font-family: Georgia, serif;
+        margin-bottom: 10px;
+    }
+
+    .feedback-container p {
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    label {
+        display: block;
+        margin-top: 15px;
+        margin-bottom: 6px;
+        font-weight: bold;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #d8c8c3;
+        border-radius: 7px;
+        box-sizing: border-box;
+        font-size: 15px;
+    }
+
+    textarea {
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    button {
+        width: 100%;
+        margin-top: 22px;
+        padding: 13px;
+        border: none;
+        border-radius: 7px;
+        background: #a85f58;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        opacity: 0.9;
+    }
+</style>
+
+</head><body><header>
+    <h1>Shravani Arts & Crafts</h1><nav>
+    <a href="index.html">Home</a>
+    <a href="Art.html">Art</a>
+    <a href="Handmade.html">Handmade</a>
+    <a href="Custom-sketch.html">Custom Sketch</a>
+    <a href="Contact.html">Contact</a>
+    <a href="Feedback.html">Feedback</a>
+</nav>
+
+</header><div class="feedback-container"><h2>We Value Your Feedback 💕</h2>
+
+<p>
+    Your feedback helps us improve our products and service.
+</p>
+
+<form action="https://formsubmit.co/YOUR-EMAIL-HERE" method="POST">
+
+    <input type="hidden" name="_subject" value="New Feedback - Shravani Arts & Crafts">
+
+    <input type="hidden" name="_captcha" value="false">
+
+    <label for="name">Your Name</label>
+    <input type="text" id="name" name="Name" placeholder="Enter your name" required>
+
+    <label for="rating">How was your experience?</label>
+    <select id="rating" name="Rating" required>
+        <option value="">Select</option>
+        <option value="Excellent">Excellent ⭐⭐⭐⭐⭐</option>
+        <option value="Very Good">Very Good ⭐⭐⭐⭐</option>
+        <option value="Good">Good ⭐⭐⭐</option>
+        <option value="Average">Average ⭐⭐</option>
+        <option value="Needs Improvement">Needs Improvement ⭐</option>
+    </select>
+
+    <label for="feedback">Your Feedback</label>
+    <textarea id="feedback" name="Feedback" placeholder="Write your feedback here..." required></textarea>
+
+    <label for="suggestion">Any Suggestions? (Optional)</label>
+    <textarea id="suggestion" name="Suggestions" placeholder="Tell us how we can improve..."></textarea>
+
+    <button type="submit">Submit Feedback</button>
+
+</form>
+
+</div></body>
+</html>
